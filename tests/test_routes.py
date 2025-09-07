@@ -165,7 +165,7 @@ class TestAccountService(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         updated_account = resp.get_json()
         self.assertEqual(updated_account["name"], "Something Known")
-    
+
     def test_put_method_not_found(self):
         """It should not Update an Account that is not found"""
         fake_id = 99999
